@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Ella no te ama</p>
-    <p>No mueras</p>
-    <p>Ella te odia</p>
+    <main id="principal">
+        <header>
+            <img src="datos/logoexa.png" alt="">
+            <label id="titulo">Sistema de Ventas - Exa01
+                <hr color="blue">
+            </label>
+
+            <section>
+                <ul>
+                    <li><a class="active" onclick="inicio()">Inicio</a></li>
+                    <li><a onclick="ventas()">Ventas</a></li>
+                    <li><a onclick="reportes()">Reportes</a></li>
+                    <li><a onclick="clientes()">Clientes</a></li>
+                    <li><a onclick="productos()">Productos</a></li>
+                </ul>
+                <div id="part_inicio">
+                <label id="inicio">Bienvenido al Sistema de Ventas</label>
+                </div>
+                <div style="display:none" id="ventas">
+                    <label id="labelventas">Ventas</label>
+                </div>
+                <div id="reportes" style="display:none">
+                    <label id="labelreportes">Reportes</label>
+                </div>
+                <div id="clientes" style="display:none">
+                    <label id="labelclientes">Clientes</label>
+                </div>
+                <div id="productos" style="display:none">
+                    <label id="labelproductos">Productos</label>
+                </div>
+            </section>
+        </header>
+        <main id="cuerpo">
+
+        </main>
+        <script src="codigo.js"></script>
 </body>
+
 </html>
