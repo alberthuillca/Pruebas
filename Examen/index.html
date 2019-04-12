@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
@@ -15,7 +16,7 @@
         <header>
             <img src="datos/logoexa.png" alt="">
             <label id="titulo">Sistema de Ventas - Exa01
-                <hr color="blue">
+                <hr id="prime_linea" color="blue">
             </label>
 
             <section>
@@ -26,25 +27,164 @@
                     <li><a onclick="clientes()">Clientes</a></li>
                     <li><a onclick="productos()">Productos</a></li>
                 </ul>
+            </section>
+            <section id="inicio">
                 <div id="part_inicio">
-                <label id="inicio">Bienvenido al Sistema de Ventas</label>
-                </div>
-                <div style="display:none" id="ventas">
-                    <label id="labelventas">Ventas</label>
-                </div>
-                <div id="reportes" style="display:none">
-                    <label id="labelreportes">Reportes</label>
-                </div>
-                <div id="clientes" style="display:none">
-                    <label id="labelclientes">Clientes</label>
-                </div>
-                <div id="productos" style="display:none">
-                    <label id="labelproductos">Productos</label>
+                    <label id="inicio">Bienvenido al Sistema de Ventas</label>
                 </div>
             </section>
-        </header>
-        <main id="cuerpo">
+            <section style=display:none id="ventas">
+                    <label id="ven">Ventas
+                            <hr color="blue">
+                        </label><br><br><br>
+                <form action="">
+                    <label for="">Cliente</label>
+                    <input type="text" name="clien" id="cliente" placeholder="Cliente...">
+                    <input type="button" value="" > <i class="fas fa-search"></i>
+                    <br>
+                    <input class="boton" id="botone" type="button" value="Producto"> <span class="fas fa-cart-plus"></span>
+                    <br>
+                    <input type="text" name="producto" id="producto" placeholder="Producto...">
+                    <input type="text" name="precio" id="precio" placeholder="Precio...">
+                    <input type="text" name="cantidad" id="cantidad"  placeholder="Cantidad...">
+                    <br>
+                    <input id="lado" type="button" value="Enviar" >
+                </form>
+            </section>
+            <section style=display:none id="reportes">
+                <label id="repor">Reportes
+                    <hr color="blue">
+                </label><br><br><br><br>
+                <table id="tabla1">
+                    <tr>
+                        <th>Ventana</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Accion</th>
+                    </tr>
+                    <tr>
+                        <td>V001</td>
+                        <td>Mouse</td>
+                        <td>25</td>
+                        <td>10</td>
+                        <td>250</td>
+                        <td><button<i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>V002</td>
+                        <td>Teclado</td>
+                        <td>50</td>
+                        <td>10</td>
+                        <td>500</td>
+                        <td><button<i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>V003</td>
+                        <td>Parlantes</td>
+                        <td>200</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td><button<i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>V004</td>
+                        <td>Impresora</td>
+                        <td>700</td>
+                        <td>2</td>
+                        <td>1400</td>
+                        <td><button<i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+                </table>
 
+            </section>
+            <section style=display:none id="clientes">
+                <label id="clien">Clientes
+                    <hr color="blue">
+                </label><br><br><br><br>
+                <table id="tabla2">
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>DNI</th>
+                        <th>Accion</th>
+                    </tr>
+                    <tr>
+                        <td>C001</td>
+                        <td>David</td>
+                        <td>Reyna</td>
+                        <td>33261202</td>
+                        <td><button<i class="fas fa-user-plus"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Keyla</td>
+                        <td>De La Cruz</td>
+                        <td>38434838</td>
+                        <td><button<i class="fas fa-user-plus"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Rolando</td>
+                        <td>Jimanez</td>
+                        <td>43493473</td>
+                        <td><button<i class="fas fa-user-plus" ></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>Lucas</td>
+                        <td>Ayala</td>
+                        <td>43942934</td>
+                        <td><button<i class="fas fa-user-plus"></i></button></td>
+                    </tr>
+                    </table>
+            </section>
+            <section style=display:none id="productos">
+                <label id="prod">
+                    Productos
+                    <hr color="blue">
+                </label><br><br><br><br>
+                <table id="tabla3">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Stock</th>
+                            <th>Accion</th>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>8</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td><button><i class="fas fa-cart-plus"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Teclado</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>30</td>
+                            <td><button><i class="fas fa-cart-plus"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Parlantes</td>
+                            <td>20</td>
+                            <td>200</td>
+                            <td>20</td>
+                            <td><button><i class="fas fa-cart-plus"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Impresora</td>
+                            <td>200</td>
+                            <td>700</td>
+                            <td>20</td>
+                            <td><button><i class="fas fa-cart-plus"></i></button></td>
+                        </tr>
+            </section>
+
+        </header>
         </main>
         <script src="codigo.js"></script>
 </body>
