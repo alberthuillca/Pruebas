@@ -34,3 +34,10 @@ function productos() {
 	document.getElementById("clientes").style.display= "none";
 	document.getElementById("productos").style.display= "block";
 }
+function addcliente(x) {
+	var cliente=[];
+	var table=document.getElementById("tablaclientes");
+	for (var i = 0, row; row = table.rows[x]; i++) {
+		
+	}
+}
